@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyA3N7neUW46vdfApsprb3n3Qd6dyPu95dk",
+  apiKey: "",
   authDomain: "ecofyme-d2e71.firebaseapp.com",
   databaseURL: "https://ecofyme-d2e71.firebaseio.com",
   projectId: "ecofyme-d2e71",
