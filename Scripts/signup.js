@@ -30,10 +30,20 @@ signUpForm.addEventListener('submit', (e) => {
 
   const email = Form['email-signup'].value
   const password = Form['password-signup'].value
+  const passwordConfirm = Form['password-signup-confirm'].value
 
-  auth.createUserWithEmailAndPassword(email, password).then(cred => {
-    
-    Form.reset();
-  });
-  
-})
+  if(password === passwordConfirm){
+    firebase.auth().createUserWithEmailAndPassword(email,password).then(()=>{
+      Form.reset();
+    })
+    .catch((error)=>{
+      alert(error.message)
+    });
+  }
+  else{
+    alert("Passwords didnt match, try again");
+  }
+
+
+ 
+});
