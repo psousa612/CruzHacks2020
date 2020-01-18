@@ -46,11 +46,7 @@ const firebaseConfig = {
       // Browser doesn't support Geolocation
       handleLocationError(false, infoWindow, map.getCenter());
     }
-    var thisMarker = new google.maps.Marker({
     
-      position:{lat: -68, lng: 20},
-      map:map
-    })
 
     db.collection('Posts').get().then((snapshot) => {
       snapshot.docs.forEach(doc => {
@@ -59,17 +55,12 @@ const firebaseConfig = {
             position:{lat: doc.data().Location.Lat, lng: doc.data().Location.Lng},
             map:map
           })
+          thisMarker.addListener('click', function(e){
+            
+            infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+' >'+'<p>' + doc.data().caption + '</p>');            
+            infoWindow.open(map, thisMarker);
+          })
 
-      }) 
+      })
     })
-
-
-  }
-
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-                          'Error: The Geolocation service failed.' :
-                          'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
   }
