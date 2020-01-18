@@ -5,10 +5,10 @@
     <!-- This ensures that the web app works mobilely -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>EcofyMe</title>
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Host An Event</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -18,21 +18,21 @@
   </head>
   <body>
     <div class="base">
-        <img id="image"
-    <form id="loginForm" class="w-75 mx-auto">
+        <img id="image">
+    <form id="loginForm" class="w-75 mx-auto text-center">
+    <h1>Host An Event!</h1>
     <div class="form-group">
         <input class="form-control" type="Title" id="title" placeholder="Title" required />
       </div>
       <div class="form-group">
-        <textarea class="form-control" rows="5" id="comment" placeholder="Comment"></textarea>
+        <input class="form-control" type="datetime-local" name="Date">
       </div>
       <div class="form-group">
-        <textarea class="form-control" rows="5" id="comment" placeholder="Comment"></textarea>
+        <input class="form-control" type="number" min="1" max="100" name="people" placeholder="Number of People Needed">
       </div>
-      <div class="form-group">
-        <textarea class="form-control" rows="5" id="comment" placeholder="Comment"></textarea>
-      </div>
-      <input type="file" value="upload" id="fileUpload" accept="image/*"> 
+      <div class="form-group">    
+        <textarea class="form-control" name="message" cols="30" rows= placeholder="Notes, Comments, Equipment Requests, etc""10"></textarea>
+    </div>
     </form>
     <div>
   </body>
