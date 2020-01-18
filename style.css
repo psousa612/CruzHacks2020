@@ -44,3 +44,9 @@ a {
 .message-body {
   clear: left;
 }
+
+.placeholder-img {
+  height: 300px;
+  width: 100%;
+  background-color: white;
+}
