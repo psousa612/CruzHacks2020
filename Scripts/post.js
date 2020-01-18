@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyA3N7neUW46vdfApsprb3n3Qd6dyPu95dk",
     authDomain: "ecofyme-d2e71.firebaseapp.com",
     databaseURL: "https://ecofyme-d2e71.firebaseio.com",
     projectId: "ecofyme-d2e71",
@@ -32,9 +32,11 @@ const firebaseConfig = {
         storageRef.put(file).then(function() {
             
             //get download url for image and store to firestore
-            storage.ref().child(fileName).getDownloadURL().then(function(url) {
+            storage.ref().child(fileName).getDownloadURL().then(function(url) { 
                 var Image = document.getElementById('image')
+                
                 Image.src = url
+                Image.className = "resize";
 
                 function getLocation(){
                     if(navigator.geolocation){

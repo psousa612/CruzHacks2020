@@ -8,6 +8,7 @@
     <title>EcofyMe</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
@@ -18,11 +19,11 @@
     <div id="login-div" >
         <center><h1>Login</h1></center>
         <form id="loginForm" class="w-75 mx-auto">
-          <div class="input-field">
-            <input type="email" id="email-logIn" class="form-control" placeholder="Email" required />
+          <div class="form-group">
+            <input class="form-control" type="email" id="email-logIn" placeholder="Email" required />
           </div>
-          <div class="input-field">
-            <input type="password" id="password-logIn" class="form-control" placeholder="Password" required />
+          <div class="input-field form-group">
+            <input class="form-control" type="password" id="password-logIn" placeholder="Password" required />
           </div>
           <button type="submit" class="form-group btn btn-dark">Log In</button>
           <span> or 

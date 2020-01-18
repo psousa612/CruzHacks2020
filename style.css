@@ -2,6 +2,14 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(#cbd4ff,#c0c7ff,#aeb8ff,#96a2ff,#8189ff);
+    font-family: "Helvetica, sans-serif"
+  }
+
+  .h1{
+    font: center;
+    margin-bottom: 400px;
+    padding:20px;
   }
 
 /* Main Page */
@@ -10,3 +18,15 @@ html, body {
     width:100%;
   }
 
+.hidden{
+  display:none;
+}
+
+.unhidden{
+  display:block;
+}
+
+.resize{
+  height: 50%;
+  width: 50%;
+}

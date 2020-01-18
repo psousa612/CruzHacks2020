@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyA3N7neUW46vdfApsprb3n3Qd6dyPu95dk",
   authDomain: "ecofyme-d2e71.firebaseapp.com",
   databaseURL: "https://ecofyme-d2e71.firebaseio.com",
   projectId: "ecofyme-d2e71",
@@ -9,11 +9,11 @@ const firebaseConfig = {
   measurementId: "G-6T8H21JFBR"
 };
 
-  //initialize firebase
-  firebase.initializeApp(firebaseConfig);
+//initialize firebase
+firebase.initializeApp(firebaseConfig);
   
   //auth firebase refs
-  const db = firebase.firestore();
+const db = firebase.firestore();
   const auth = firebase.auth();
   
   // New map
@@ -55,10 +55,18 @@ const firebaseConfig = {
           })
           thisMarker.addListener('click', function(e){
             
-            infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+' >'+'<p>' + doc.data().caption + '</p>');            
+            infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+'height = 40% width=40%'+' >'+'<p>' + doc.data().caption + '</p>');            
             infoWindow.open(map, thisMarker);
           })
 
       })
     })
+  }
+
+
+  function logout(){
+    auth.signOut().then(()=>{
+      console.log("logged out");
+    })
+
   }
