@@ -50,3 +50,14 @@ a {
   width: 100%;
   background-color: white;
 }
+
+/* Posting page */
+#mainQuestion{
+  margin-top: 100px;
+}
+
+/* Front Page */
+#signOrLog{
+  margin: auto;
+  align-content: center;
+}
