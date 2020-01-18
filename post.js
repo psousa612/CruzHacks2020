@@ -15,3 +15,9 @@ const firebaseConfig = {
     //auth firebase refs
     const db = firebase.firestore();
     const auth = firebase.auth();
+
+
+auth.onAuthStateChanged(user => {
+    if(user == null)
+      window.location.href = "..//index.html";
+})
