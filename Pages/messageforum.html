@@ -11,15 +11,17 @@
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
   </head>
   <body class="w-50 mx-auto">
     <img src="" alt="" class="">
     <p class="placeholder-img"></p>
     <a href="#" class="btn btn-dark col-sm-12 p-4">Create New Message</a>
-
+<div id="messagecenter">
     <div class="message mx-auto justify-content-center card mt-3">
       <div class="message-title card-header">
         <div class="message-name col-sm-2">Name</div>
@@ -99,6 +101,7 @@
       </div>
       <div class="message-body card-body text-left pl-5">Come pick up yall's trash</div>
     </div>
-    
+  </div>
+  <script src = "../Scripts/messageforum.js"></script>
   </body>
 </html>
