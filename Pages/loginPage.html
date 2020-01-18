@@ -17,25 +17,20 @@
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
   </head>
   <body>
-
-    <div class="card">
-        <div class="card-body">
-            <form id="loginForm" class="form-group">
-            </form>
-        </div>
-    </div>
-    <hr>
     <div id="login-div" class = unhidden>
-        <h1>Login</h1><br />
-        <form id="loginForm">
+        <center><h1>Login</h1></center>
+        <form id="loginForm" class="w-75 mx-auto">
           <div class="input-field">
-            <input type="email" id="email-logIn" placeholder="Email" required />
+            <input temail" id="email-logIn" plac class="form-control"eholder="Email" required />
           </div>
           <div class="input-field">
-            <input type="password" id="password-logIn" placeholder="Password" required />
+            <input type="password" id="password-logIn" placeclass="form-control" holder="Password" required />
           </div>
-          <button type='submit'>Login</button>
-          <span> or <input type="button" onclick="unhide(this) " value="Create New User"></span>
+          <button type="button" class="form-group btn btn-dark">Log In</button>
+          <span> or 
+            <a type="button" class="form-group btn 
+   ark" href="signInPage.html">Create New User</a>
+        </span>
         </form>
       </div>
   </body>
