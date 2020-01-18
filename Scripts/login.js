@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyBh2ky_xnWwRW61N0tmXnM9RnCWsI5D3OA",
     authDomain: "eevent-10adf.firebaseapp.com",
     databaseURL: "https://eevent-10adf.firebaseio.com",
     projectId: "eevent-10adf",
@@ -24,14 +24,19 @@ auth.onAuthStateChanged(user => {
 
 const form = document.querySelector('#loginForm');
 form.addEventListener('submit', (e)=>{
-  console.log("hello")
+  
   e.preventDefault();
 
   const email = form['email-logIn'].value
   const password = form['password-logIn'].value
 
-  auth.signInWithEmailAndPassword(email, password).then(cred => {
-
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    var len = error.message.length;
+    if(len != 0){
+      alert("Wrong credentials / user doesnt exist");
+    }
     //close login modal
     form.reset();
 
