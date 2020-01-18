@@ -33,11 +33,30 @@ const firebaseConfig = {
             
             //get download url for image and store to firestore
             storage.ref().child(fileName).getDownloadURL().then(function(url) {
-                db.collection('Posts').doc().set({
-                    Img: url
-                
-                })
+
+                function getLocation(){
+                    if(navigator.geolocation){
+                        console.log("run bitch");
+                        navigator.geolocation.getCurrentPosition(saveCoords);
+                    }
+                    else{
+                        //error
+                        
+                    }
+                }
+                function saveCoords(position){
+                    db.collection('Posts').doc().set({
+                        Img: url,
+                        Location: {
+                            Lat:position.coords.latitude,
+                            Lng:position.coords.longitude
+                        }
+                    
+                    })
+                }
+                getLocation();
             })
+        
 
         })
 
