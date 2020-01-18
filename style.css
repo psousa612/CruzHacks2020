@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(#cbd4ff,#c0c7ff,#aeb8ff,#96a2ff,#8189ff);
+    text-align: center;
     font-family: "Helvetica, sans-serif"
   }
 
