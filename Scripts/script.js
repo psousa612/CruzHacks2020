@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyA3N7neUW46vdfApsprb3n3Qd6dyPu95dk",
   authDomain: "ecofyme-d2e71.firebaseapp.com",
   databaseURL: "https://ecofyme-d2e71.firebaseio.com",
   projectId: "ecofyme-d2e71",
@@ -119,7 +119,7 @@ const db = firebase.firestore();
         infoWindow.open(map);
         map.setCenter(pos);
       }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
+       // handleLocationError(true, infoWindow, map.getCenter());
       });
     } else {
       // Browser doesn't support Geolocation
@@ -135,9 +135,11 @@ const db = firebase.firestore();
             map:map
           })
           thisMarker.addListener('click', function(e){
-            
-            infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+'height = 40% width=40%'+' >'+'<p>' + doc.data().caption + '</p>');            
-            infoWindow.open(map, thisMarker);
+            if(doc.data().hosted){
+              console.log("bitch hosted");
+              infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+'height = 40% width=40%'+' >'+'<a href="../CruzHacks2020/Pages/host.html" class="btn btn-light">Host the Event</a>');
+            }           
+            infoWindow.open(map, thisMarker);onclick
           })
 
       })
