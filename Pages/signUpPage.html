@@ -5,7 +5,7 @@
     <!-- This ensures that the web app works mobilely -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>EcofyMe</title>
+    <title>EcofyMe - Sign Up</title>
     <style>
       html, body{
           font-family: "Helvetica, sans-serif";
@@ -23,9 +23,13 @@
   </head>
 
   <body>
-  <div id="signup-div">
-        <center><h1>Sign Up</h1></center>
-        <form id="signUpForm" class="w-75 mx-auto">
+  <div id="signup-div"  class="w-50 mx-auto">
+        
+        <form id="signUpForm" class="mx-auto mt-5">
+          <div class="text-center">
+            <a href="../index.html" class="back-button btn btn-link pb-1">Home</a>
+            <h1>Sign Up</h1>
+          </div>
           <div class="form-group">
               <input class="form-control" type="text" id="username-signup" placeholder="Username" required />
           </div>
@@ -35,8 +39,8 @@
           <div class="input-field form-group">
             <input class="form-control" type="password" id="password-signup" placeholder="Password" required />
           </div>
-          <button type="submit" class="form-group btn btn-dark">Sign up</button>
-          <a href="loginPage.html" class="btn btn-link">
+          <button type="submit" class="form-group btn btn-dark">Sign Up</button>
+          <span><a href="loginPage.html" class="form-group btn btn-link mr-auto">Login</a></span>
         </form>
       </div>
     </div>

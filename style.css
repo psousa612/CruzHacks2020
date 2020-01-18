@@ -12,6 +12,10 @@ html, body {
     padding:20px;
   }
 
+a {
+  color: #000000;
+}
+
 /* Main Page */
 #map{
     height:600px;
@@ -29,4 +33,13 @@ html, body {
 .resize{
   height: 50%;
   width: 50%;
+}
+
+/* messageforum*/
+.message-name {
+  float: left;
+}
+
+.message-body {
+  clear: left;
 }

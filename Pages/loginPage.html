@@ -5,7 +5,7 @@
     <!-- This ensures that the web app works mobilely -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>EcofyMe</title>
+    <title>EcofyMe - Login</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -16,9 +16,13 @@
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
   </head>
   <body>
-    <div id="login-div" >
-        <center><h1>Login</h1></center>
-        <form id="loginForm" class="w-75 mx-auto">
+    <div id="login-div" class="w-50 mx-auto" >
+        <form id="loginForm" class="mx-auto mt-5">
+          
+          <div class="text-center">
+            <a href="../index.html" class="back-button btn btn-link pb-1">Home</a>
+            <h1>Login</h1>
+          </div>
           <div class="form-group">
             <input class="form-control" type="email" id="email-logIn" placeholder="Email" required />
           </div>
@@ -26,8 +30,9 @@
             <input class="form-control" type="password" id="password-logIn" placeholder="Password" required />
           </div>
           <button type="submit" class="form-group btn btn-dark">Log In</button>
-          <span> or 
-            <a type="button" class="form-group btn ark" href="signUpPage.html">Create New User</a>
+          <span>
+            
+            <a type="button" class="form-group btn btn-link mr-auto" href="signUpPage.html">Sign Up</a>
         </span>
         </form>
       </div>
