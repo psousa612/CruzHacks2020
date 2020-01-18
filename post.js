@@ -15,9 +15,28 @@ const firebaseConfig = {
     //auth firebase refs
     const db = firebase.firestore();
     const auth = firebase.auth();
+    const storage = firebase.storage();
+
+    var fileUploadEvent = document.getElementById('fileUpload');
+
+    //check for button click
+    fileUploadEvent.addEventListener('change', function(e){
+
+        var file = e.target.files[0];
+        var storageRef = storage.ref(file.name)
+
+        //store image in firebase storage
+        var task = storageRef.put(file).then(function(file) {
+            //get download url for image and store to firestore
+            storageAddress.child(file.name).getDownloadURL().then(function(url) {
+                db.collection('Posts').doc().set({
+                    Img: url
+                
+                })
+            })
+
+        })
+
+    })
 
 
-auth.onAuthStateChanged(user => {
-    if(user == null)
-      window.location.href = "..//index.html";
-})
