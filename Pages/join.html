@@ -17,25 +17,18 @@
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
     </head>
     <body>
-        <div class="base">
-        <img id="image">
-        <form id="joinform" class="w-75 mx-auto text-center">
-        <h1>Join An Event!</h1>
-        <div class="form-group">
-            <input class="form-control" type="Title" id="title" placeholder="Title" required />
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="5" id="comment" placeholder="Comment"></textarea>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="5" id="comment" placeholder="Comment"></textarea>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="5" id="comment" placeholder="Comment"></textarea>
-          </div>
-          <button class="submit">Submit</button>
-        </form>
-        <div>
+      <div class="mx-auto text-center">
+      <h1 >Join This Event?</h1>
+      <div class="w-75 mx-auto main-container p-3">
+        <h2 id="host-name">Host Name:</h2>
+        <h2 id="volunteer-num">Number of Volunteers So Far: </h2>
+        <h2 id="spots-left">Spots Left: </h2>
+        <h2 id="date-time">Date & Time: </h2>
+        <h2 id="host-notes">Host Notes: </h2>
+        <button class="btn btn-success pl-4 pr-4 mr-4">Yes</button>
+        <a href="../index.html" class="btn btn-danger pl-4 pr-4">No</a>
+      </div>
     </body>
+
 
 </html>
