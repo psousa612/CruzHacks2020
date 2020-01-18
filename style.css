@@ -57,7 +57,7 @@ a {
 }
 
 /*frontpage*/
-.faq-container {
+.faq-container, .main-container {
   background-color: white;
   border-radius: 30px;
 }
