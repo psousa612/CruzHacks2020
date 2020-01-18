@@ -23,12 +23,16 @@ const firebaseConfig = {
     fileUploadEvent.addEventListener('change', function(e){
 
         var file = e.target.files[0];
-        var storageRef = storage.ref(file.name)
+        var storageRef = storage.ref(file.name);
+        var fileName = "" + file.name;
+        
+
 
         //store image in firebase storage
-        var task = storageRef.put(file).then(function(file) {
+        storageRef.put(file).then(function() {
+            
             //get download url for image and store to firestore
-            storageAddress.child(file.name).getDownloadURL().then(function(url) {
+            storage.ref().child(fileName).getDownloadURL().then(function(url) {
                 db.collection('Posts').doc().set({
                     Img: url
                 
