@@ -38,6 +38,8 @@ const firebaseConfig = {
                 Image.src = url
                 Image.className = "resize";
 
+                var Title = document.getElementById('title');
+
                 function getLocation(){
                     if(navigator.geolocation){
                         console.log("run bitch");
@@ -48,13 +50,16 @@ const firebaseConfig = {
                         
                     }
                 }
+
                 function saveCoords(position){
                     db.collection('Posts').doc().set({
+                        title: Title.value,
                         Img: url,
                         Location: {
                             Lat:position.coords.latitude,
                             Lng:position.coords.longitude
-                        }
+                        },
+                        hosted: false
                     })
                 }
                 getLocation();
