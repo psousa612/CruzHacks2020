@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyA3N7neUW46vdfApsprb3n3Qd6dyPu95dk",
+  apiKey: "",
   authDomain: "ecofyme-d2e71.firebaseapp.com",
   databaseURL: "https://ecofyme-d2e71.firebaseio.com",
   projectId: "ecofyme-d2e71",
@@ -138,6 +138,10 @@ const db = firebase.firestore();
             if(doc.data().hosted){
               console.log("bitch hosted");
               infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+'height = 40% width=40%'+' >'+'<a href="Pages/host.html" class="btn btn-light">Host the Event</a>');
+            }
+            else if(!doc.data().hosted){
+              console.log("join bitch?");
+              infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+'height = 40% width=40%'+' >'+'<a href="Pages/join.html" class="btn btn-light">Join the Event</a>')
             }           
             infoWindow.open(map, thisMarker);onclick
           })
