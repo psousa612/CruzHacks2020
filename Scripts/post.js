@@ -53,7 +53,6 @@ const firebaseConfig = {
                             Lat:position.coords.latitude,
                             Lng:position.coords.longitude
                         }
-                    
                     })
                 }
                 getLocation();

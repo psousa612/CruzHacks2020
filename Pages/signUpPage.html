@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>EcofyMe</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -18,25 +16,23 @@
   </head>
 
   <body>
-  <div id="signup-div" class = hidden>
+  <div id="signup-div">
         <center><h1>Sign Up</h1></center>
         <form id="signUpForm" class="w-75 mx-auto">
           <div class="form-group">
-              <!-- <label for="username-signup">Username: </label> -->
               <input class="form-control" type="text" id="username-signup" placeholder="Username" required />
           </div>
           <div class="form-group">
-            <!-- <label for="email-signup">Email Address: </label> -->
             <input class="form-control" type="email" id="email-signup" placeholder="Email" required />
           </div>
           <div class="input-field form-group">
-            <!-- <label for="password-signup">Password: </label> -->
             <input class="form-control" type="password" id="password-signup" placeholder="Password" required />
           </div>
-
           <button type="submit" class="form-group btn btn-dark">Sign up</button>
           <a href="loginPage.html" class="btn btn-link">
         </form>
       </div>
     </div>
+
+    <script src="../Scripts/signup.js"></script>
   </body>

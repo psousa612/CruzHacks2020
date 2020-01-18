@@ -16,8 +16,6 @@ const firebaseConfig = {
   const db = firebase.firestore();
   const auth = firebase.auth();
   
-  
-  
   // New map
   var map, infoWindow;
   function initMap() {

@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>EcofyMe</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -17,21 +15,22 @@
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
   </head>
   <body>
-    <div id="login-div" class = unhidden>
+    <div id="login-div" >
         <center><h1>Login</h1></center>
         <form id="loginForm" class="w-75 mx-auto">
           <div class="input-field">
-            <input temail" id="email-logIn" plac class="form-control"eholder="Email" required />
+            <input type="email" id="email-logIn" class="form-control" placeholder="Email" required />
           </div>
           <div class="input-field">
-            <input type="password" id="password-logIn" placeclass="form-control" holder="Password" required />
+            <input type="password" id="password-logIn" class="form-control" placeholder="Password" required />
           </div>
-          <button type="button" class="form-group btn btn-dark">Log In</button>
+          <button type="submit" class="form-group btn btn-dark">Log In</button>
           <span> or 
-            <a type="button" class="form-group btn 
-   ark" href="signInPage.html">Create New User</a>
+            <a type="button" class="form-group btn ark" href="signUpPage.html">Create New User</a>
         </span>
         </form>
       </div>
+
+      <script src="../Scripts/login.js"></script>
   </body>
 </html>
