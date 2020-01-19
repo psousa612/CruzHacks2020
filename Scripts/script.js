@@ -151,7 +151,13 @@ const auth = firebase.auth();
 
   function logout(){
     auth.signOut().then(()=>{
-      console.log("logged out");
+      alert("logged out");
     })
 
   }
+  auth.onAuthStateChanged(user => {
+    if(user == null){
+      window.location.href = "Pages/loginPage.html";
+    }
+    
+  })
