@@ -62,12 +62,16 @@ const firebaseConfig = {
                         hosted: false
                     })
                 }
+                
                 getLocation();
+                
+                
             })
         
 
         })
 
     })
+
 
 
