@@ -26,14 +26,14 @@ db.collection('Posts').doc(queryString).get().then(doc => {
     var remSpot = document.getElementById('spots-left')
     var date = document.getElementById('date-time')
     var note = document.getElementById('host-notes')
-    var FullDate = (doc.data().Date).toDate();
+   // var FullDate = (doc.data().Date).toDate();
 
     
 
     eventname.innerHTML += (doc.data().title)
     volNum.innerHTML += (doc.data().VolunteerNum)
     remSpot.innerHTML += (doc.data().RemainingSpots)
-    date.innerHTML += (FullDate.getMonth()+1).toString() + "/" + FullDate.getDate().toString()  + "/" +  FullDate.getFullYear().toString() + "  " + FullDate.toLocaleTimeString();
+    date.innerHTML += doc.data().Date;
     note.innerHTML += (doc.data().notes)
 
     
