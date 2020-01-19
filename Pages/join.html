@@ -20,11 +20,31 @@
       <div class="mx-auto text-center">
       <h1 >Join This Event?</h1>
       <div class="w-75 mx-auto main-container p-3">
-        <h2 id="host-name">Event Name: </h2>
-        <h2 id="volunteer-num">Volunteers So Far: </h2>
-        <h2 id="spots-left">Spots Left: </h2>
-        <h2 id="date-time">Date & Time: </h2>
-        <h2 id="host-notes">Host Notes: </h2>
+      
+        <table class="table">
+          <tr>
+            <th scope="row">Event Name:</th>
+            <td id="host-name" class="pl-0"></td>
+          </tr>
+          <tr>
+            <th scope="row">Volunteers So Far:</th>
+            <td id="volunteer-num"></td>
+          </tr>
+          <tr>
+            <th scope="row">Spots Left:</th>
+            <td id="spots-left"></td>
+          </tr>
+          <tr>
+            <th scope="row">Data & Time:</th>
+            <td id="date-time"></td>
+          </tr>
+          <tr>
+            <th scope="row">Host Notes:</th>
+            <td id="host-notes"></td>
+          </tr>
+        </table>
+
+
         <button class="btn btn-success pl-4 pr-4 mr-4" onclick='btnyes()'>Yes</button>
         <a href="../index.html" class="btn btn-danger pl-4 pr-4">No</a>
       </div>
