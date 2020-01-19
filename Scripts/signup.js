@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyBh2ky_xnWwRW61N0tmXnM9RnCWsI5D3OA",
     authDomain: "eevent-10adf.firebaseapp.com",
     databaseURL: "https://eevent-10adf.firebaseio.com",
     projectId: "eevent-10adf",
@@ -16,8 +16,8 @@ const firebaseConfig = {
   const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
-    if(user != null)
-      window.location.href = "../index.html";
+    //if(user != null)
+    //  window.location.href = "../index.html";
   })
   
 
@@ -27,18 +27,24 @@ const Form = document.querySelector('#signUpForm');
 //Code for the sign up fuctionality
 signUpForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
+  const username = Form['username-signup'].value
   const email = Form['email-signup'].value
   const password = Form['password-signup'].value
   const passwordConfirm = Form['password-signup-confirm'].value
 
   if(password === passwordConfirm){
-    firebase.auth().createUserWithEmailAndPassword(email,password).then(()=>{
+    firebase.auth().createUserWithEmailAndPassword(email,password).then(cred => {
+      
+      auth.onAuthStateChanged(user => {
+        db.collection('Users').doc().set({username: username, userUID: user.UID});
+      })
       Form.reset();
+
     })
     .catch((error)=>{
       alert(error.message)
     });
+   
   }
   else{
     alert("Passwords didnt match, try again");
