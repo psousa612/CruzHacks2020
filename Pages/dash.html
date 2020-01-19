@@ -9,7 +9,7 @@
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../style.css" />
-    <script src="Scripts/script.js"></script>
+    <script src="Scripts/dash.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -20,21 +20,21 @@
 
 <body> 
   <div class="wrapper">
-    <h2>Welcome!</h2>
+    <script>personalGreet();</script>
     <div class="left">
       <img src="https://i.ytimg.com/vi/F08EpJWFYe0/hqdefault.jpg" alt="user" width="100">
-      <h4 >firstname lastname</h4>
+      <h4 id="name">firstname lastname</h4>
     </div>
     <div class="right">
       <div class="info">
         <h3>About Yourself</h3> 
         <div class="aboutThem">
-          <h4>Email</div>
-            <p>poop</p>
+          <h4 id="email">Email</div>
+            <script>findEmail();</script>
         </div>
         <div class="aboutThem">
-          <h4>Phone Number</div>
-            <p>poop</p>
+          <h4 id="phone number">Phone Number</div>
+            <script>findNumber();</script>
         </div>
         <div class="aboutThem">
           <h4> Total EcoPoints </h4>

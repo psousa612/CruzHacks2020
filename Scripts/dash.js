@@ -14,8 +14,21 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   //Personlize Greeting message:
-  var name = db.collection('Users').data().username;
-  document.getElementById("greeting").innerHTML = "Hello" + name;
+  function personalGreet(){
+    var name = db.collection('Users').data().username;
+    document.getElementById("greeting").innerHTML = "Welcome!" + name;
+  }
+
+  function findEmail(){
+    var email = db.collection('Emails').data().email;
+    document.getElementById("email").innerHTML = email
+  }
+
+  function findNumber(){
+    var email = db.collection('Numbers').data().email;
+    document.getElementById("phone number").innerHTML = email;
+    
+  }
 
 
 
