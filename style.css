@@ -65,26 +65,28 @@ a {
 /*frontpage*/
 .faq-container, .main-container {
   background-color: white;
-  border-radius: 30px;
-}
-
-.faq-question {
   border-radius: 20px;
 }
 
+.faq-question {
+  border-radius: 30px;
+}
+
 .wrapper{
+  background-color: white;
+  border-radius: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  box-shadow: 0 1px 20px rgba(69,90,100,0.08);
+  width: 700px;
 
 }
 
 .wrapper .left{
-  width: 35%;
-  padding: 30px 25px;
+  margin: auto;
+  width: 55%;
+  padding: 15px 5px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-align: center;
