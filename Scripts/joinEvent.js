@@ -36,4 +36,18 @@ db.collection('Posts').doc(queryString).get().then(doc => {
     date.innerHTML += (FullDate.getMonth()+1).toString() + "/" + FullDate.getDate().toString()  + "/" +  FullDate.getFullYear().toString() + "  " + FullDate.toLocaleTimeString();
     note.innerHTML += (doc.data().notes)
 
+    
+
 })
+
+function btnyes(){
+    db.collection('Posts').doc(queryString).get().then(doc => {
+        db.collection('Posts').doc(queryString).set({
+            VolunteerNum: ( doc.data().VolunteerNum + 1),
+            RemainingSpots: (doc.data().RemainingSpots - 1)
+        
+        },{merge:true}).then(function (){
+            window.location.href = "../index.html";
+        });
+    })
+}
