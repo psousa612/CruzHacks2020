@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="mx-auto text-center">
-    <h1 >Join This Event?</h1>
+    <h1 >Host an Event?</h1>
     <div class="w-75 mx-auto main-container p-3">
     
       <table class="table">
@@ -28,7 +28,7 @@
         </tr>
         <tr>
           <th scope="row">Volunteers Needed:</th>
-          <td><input type="number" min="1" max="100" name="people" required  id="numReq"/></td>
+          <td><input type="number" min="1" max="100" name="people" required  id="numReq" class="w-100"/></td>
         </tr>
         <tr>
           <th scope="row">Data & Time:</th>
@@ -36,15 +36,14 @@
         </tr>
         <tr>
           <th scope="row">Host Notes:</th>
-          <td><textarea placeholder="Notes, Comments, Equipment Requests, etc" rows="5" id="notes"></textarea></td>
+          <td><textarea placeholder="Notes, Comments, Equipment Requests, etc" rows="5" id="notes" class="message-text w-100"></textarea></td>
         </tr>
       </table>
 
 
-        <button class="btn btn-success pl-4 pr-4 mr-4" onclick='submitIt()'>Yes</button>
-        <a href="../index.html" class="btn btn-danger pl-4 pr-4">No</a>
+        <button class="btn btn-success pl-4 pr-4 mr-4" onclick='submitIt()'>Confirm</button>
+        <a href="../index.html" class="btn btn-danger pl-4 pr-4">Cancel</a>
       </div>
-      <button class="submit btn btn-dark" id="enter">Submit</button>
 
     </form>
     <script src="../Scripts/host.js"></script>
