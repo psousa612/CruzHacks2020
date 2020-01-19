@@ -19,32 +19,30 @@
     <body>
       <div class="mx-auto text-center">
       <h1 >Join This Event?</h1>
-      <div class="w-75 mx-auto main-container p-3">
+      <div class="w-25 mx-auto main-container p-3">
       
-        <table class="table">
-          <tr>
-            <th scope="row">Event Name:</th>
-            <td id="host-name" class="pl-0"></td>
+        <table class="table table-borderless">
+          <tr class="text-center">
+            <th scope="row" class="text-right w-50">Event Name:</th>
+            <td id="host-name" class="text-left"></td>
           </tr>
           <tr>
-            <th scope="row">Volunteers So Far:</th>
-            <td id="volunteer-num"></td>
+            <th scope="row" class="text-right">Volunteers Registered:</th>
+            <td id="volunteer-num" class="text-left"></td>
           </tr>
           <tr>
-            <th scope="row">Spots Left:</th>
+            <th scope="row" class="text-right">Spots Left:</th>
             <td id="spots-left"></td>
           </tr>
           <tr>
-            <th scope="row">Data & Time:</th>
+            <th scope="row" class="text-right">Data & Time:</th>
             <td id="date-time"></td>
           </tr>
           <tr>
-            <th scope="row">Host Notes:</th>
+            <th scope="row" class="text-right">Host Notes:</th>
             <td id="host-notes"></td>
           </tr>
         </table>
-
-
         <button class="btn btn-success pl-4 pr-4 mr-4" onclick='btnyes()'>Yes</button>
         <a href="../index.html" class="btn btn-danger pl-4 pr-4">No</a>
       </div>
