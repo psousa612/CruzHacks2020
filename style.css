@@ -10,7 +10,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-size: cover;
-    background-image: linear-gradient(#cbd4ff,#c0c7ff,#aeb8ff,#96a2ff,#8189ff);
+    background-image: repeating-linear-gradient(to right bottom, #cbd4ff,#aeb8ff,#8189ff);
   }
 
   .h1{
@@ -25,7 +25,7 @@ a {
 
 /* Main Page */
 #map{
-    height:600px;
+    height: 100%;
     width:100%;
   }
 
