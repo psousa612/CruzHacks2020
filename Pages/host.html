@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- This ensures that the web app works mobilely -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Host An Event</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="mx-auto text-center">
+    <h1 >Host an Event?</h1>
+    <div class="mx-auto main-container container">
+    
+      <table class="table">
+        <tr>
+          <th scope="row">Event Name:</th>
+          <td id='title' class></td>
+        </tr>
+        <tr>
+          <th scope="row">Volunteers Needed:</th>
+          <td><input type="number" min="1" max="100" name="people" required  id="numReq" class="w-100 border"/></td>
+        </tr>
+        <tr>
+          <th scope="row">Data & Time:</th>
+          <td><input class="form-control" type="datetime-local"  required  id="date"/></td>
+        </tr>
+        <tr>
+          <th scope="row">Host Notes:</th>
+          <td><textarea placeholder="Notes, Comments, Equipment Requests, etc" rows="5" id="notes" class="message-text w-100 border"></textarea></td>
+        </tr>
+      </table>
+
+      <div class="mx-auto pb-3">
+        <button class="btn btn-success pl-4 pr-4 mr-4" onclick='submitIt()'>Confirm</button>
+        <a href="../index.html" class="btn btn-danger pl-4 pr-4">Cancel</a>
+      </div>
+      
+      </div>
+
+    </form>
+    <script src="../Scripts/host.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- This ensures that the web app works mobilely -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EcofyMe - Login</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div id="login-div" class="w-50 mx-auto">
+      <a href="frontPage.html" class="mb-0 btn btn-secondary float-left">Home</a>
+        <form id="loginForm" class="mx-auto mt-5">
+          <h1 class="text-center clearfix mr-5 pr-3">Login</h1>
+
+          <div class="form-group float-none">
+            <input class="form-control" type="email" id="email-logIn" placeholder="Email" required />
+          </div>
+          <div class="input-field form-group">
+            <input class="form-control" type="password" id="password-logIn" placeholder="Password" required />
+          </div>
+          <button type="submit" class="form-group btn btn-dark">Log In</button>
+          <span>
+            
+            <a type="button" class="form-group btn btn-link mr-auto" href="signUpPage.html">Sign Up</a>
+        </span>
+        </form>
+      </div>
+
+      <script src="../Scripts/login.js"></script>
+  </body>
+</html>

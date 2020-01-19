@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- This ensures that the web app works mobilely -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Join An Event</title>
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+    </head>
+    <body>
+      <div class="mx-auto text-center">
+      <h1 >Join This Event?</h1>
+      <div class="main-container container mx-auto">
+      
+        <table class="table table-borderless">
+          <tr class="text-center">
+            <th scope="row" class="text-right w-50">Event Name:</th>
+            <td id="host-name" class="text-left"></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-right">Volunteers Registered:</th>
+            <td id="volunteer-num" class="text-left"></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-right">Spots Left:</th>
+            <td id="spots-left"></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-right">Data & Time:</th>
+            <td id="date-time"></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-right">Host Notes:</th>
+            <td id="host-notes"></td>
+          </tr>
+        </table>
+        <div class="mx-auto pb-3">
+          <button class="btn btn-success pl-4 pr-4 mr-4" onclick='btnyes()'>Yes</button>
+          <a href="../index.html" class="btn btn-danger pl-4 pr-4">No</a>
+        </div>
+      </div>
+
+      <script src="../Scripts/joinEvent.js"></script>
+    </body>
+
+
+</html>
