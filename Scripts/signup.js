@@ -15,35 +15,42 @@ const firebaseConfig = {
   const db = firebase.firestore();
   const auth = firebase.auth();
 
-auth.onAuthStateChanged(user => {
-    //if(user != null)
-    //  window.location.href = "../index.html";
-  })
+// auth.onAuthStateChanged(user => {
+//     if(user != null)
+//      window.location.href = "../index.html";
+//   })
   
-
+ 
   
 
 const Form = document.querySelector('#signUpForm');
 //Code for the sign up fuctionality
 signUpForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const username = Form['username-signup'].value
+  const userName = Form['username-signup'].value
   const email = Form['email-signup'].value
   const password = Form['password-signup'].value
   const passwordConfirm = Form['password-signup-confirm'].value
 
   if(password === passwordConfirm){
-    firebase.auth().createUserWithEmailAndPassword(email,password).then(cred => {
-      
-      auth.onAuthStateChanged(user => {
-        db.collection('Users').doc().set({username: username, userUID: user.UID});
-      })
+    auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    
       Form.reset();
-
-    })
-    .catch((error)=>{
+    }).catch((error)=>{
       alert(error.message)
     });
+
+    // db.collection('Users').doc().set({
+    //   username: userName
+    // });
+      
+    
+   
+    // auth.onAuthStateChanged(user => {
+    //   db.collection('Users').doc().set({userUID: user.uid});
+    // })
+    
+    
    
   }
   else{
