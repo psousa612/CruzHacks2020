@@ -13,13 +13,7 @@ When people enter our web application, they can choose to do so on their mobile 
 When it comes down to the backend aspect of our code, we have stored and made all of our calls using Google Firebase so that we may be able to store all of the user's information as well as their location based on the Google maps API. We implemented a system that is similar to a social network so that individuals may come together in order to help make our environment a better place.   
 
 ## Setup
-To run this project, using visual studio we implemented live share extension in order to easily run the web application locally:
-
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
+To run this project, using visual studio we implemented live share extension in order to easily run the web application locally, however, this method is completely optional and can run the web application locally in many other ways
 	
 ## Technologies
 Project is created with:
