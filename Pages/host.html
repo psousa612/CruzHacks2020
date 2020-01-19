@@ -19,16 +19,16 @@
   <body>
     <div class="mx-auto text-center">
     <h1 >Host an Event?</h1>
-    <div class="w-75 mx-auto main-container p-3">
+    <div class="mx-auto main-container container">
     
       <table class="table">
         <tr>
           <th scope="row">Event Name:</th>
-          <td id='title' class="pl-0"></td>
+          <td id='title' class></td>
         </tr>
         <tr>
           <th scope="row">Volunteers Needed:</th>
-          <td><input type="number" min="1" max="100" name="people" required  id="numReq" class="w-100"/></td>
+          <td><input type="number" min="1" max="100" name="people" required  id="numReq" class="w-100 border"/></td>
         </tr>
         <tr>
           <th scope="row">Data & Time:</th>
@@ -36,13 +36,15 @@
         </tr>
         <tr>
           <th scope="row">Host Notes:</th>
-          <td><textarea placeholder="Notes, Comments, Equipment Requests, etc" rows="5" id="notes" class="message-text w-100"></textarea></td>
+          <td><textarea placeholder="Notes, Comments, Equipment Requests, etc" rows="5" id="notes" class="message-text w-100 border"></textarea></td>
         </tr>
       </table>
 
-
+      <div class="mx-auto pb-3">
         <button class="btn btn-success pl-4 pr-4 mr-4" onclick='submitIt()'>Confirm</button>
         <a href="../index.html" class="btn btn-danger pl-4 pr-4">Cancel</a>
+      </div>
+      
       </div>
 
     </form>
