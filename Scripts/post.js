@@ -61,6 +61,8 @@ const firebaseConfig = {
                         },
                         hosted: false
                     })
+                    alert("Post Uploaded")
+                    window.location.href = "../index.html";
                 }
                 
                 getLocation();
