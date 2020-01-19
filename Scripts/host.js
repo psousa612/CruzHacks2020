@@ -25,13 +25,19 @@ db.collection('Posts').doc(queryString).get().then(doc => {
     document.getElementById('title').innerText = doc.data().title
 })
 
+var submit = document.getElementById('enter');
 
-db.collection('Posts').doc(queryString).set( {
-    VolunteerNum: 1,
-    RemainingSpots: document.getElementById('numReq').value,
-    Date: document.getElementById('date').value,
-    notes: document.getElementById('notes').value,
-    hosted: true
+submit.addEventListener('submit', function(e){
+    e.preventDefault();
     
-},{merge:true})
+    db.collection('Posts').doc(queryString).set( {
+        VolunteerNum: 1,
+        RemainingSpots: document.getElementById('numReq').value,
+        Date: document.getElementById('date').value,
+        notes: document.getElementById('notes').value,
+        hosted: true
+        
+    },{merge:true})
+
+}
 
