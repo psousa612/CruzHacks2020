@@ -9,10 +9,11 @@
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../style.css" />
-    <script src="Scripts/dash.js"></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
@@ -20,27 +21,29 @@
 
 <body> 
   <div class="wrapper">
-    <script>personalGreet();</script>
+  
     <div class="left">
       <img src="https://i.ytimg.com/vi/F08EpJWFYe0/hqdefault.jpg" alt="user" width="100">
       <h4 id="name">firstname lastname</h4>
     </div>
     <div class="right">
       <div class="info">
-        <h3>About Yourself</h3> 
+        <h3 id='bio'>About Yourself: </h3> 
         <div class="aboutThem">
           <h4 id="email">Email</div>
-            <script>findEmail();</script>
+           
         </div>
         <div class="aboutThem">
-          <h4 id="phone number">Phone Number</div>
-            <script>findNumber();</script>
+          <h4 id="phoneNum">Phone Number</div>
+           
         </div>
         <div class="aboutThem">
-          <h4> Total EcoPoints </h4>
+          <h4 id = "ecopts"> EcoPoints:  </h4>
+            <p>poop</p>
       </div> 
       </div>
     </div>
   </div>
+  <script src="../Scripts/dash.js"></script>
 </body>
 </html>

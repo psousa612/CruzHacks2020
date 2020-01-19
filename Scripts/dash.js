@@ -1,6 +1,6 @@
 
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyBh2ky_xnWwRW61N0tmXnM9RnCWsI5D3OA",
     authDomain: "ecofyme-d2e71.firebaseapp.com",
     databaseURL: "https://ecofyme-d2e71.firebaseio.com",
     projectId: "ecofyme-d2e71",
@@ -12,23 +12,50 @@ const firebaseConfig = {
   
   //initialize firebase
   firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  const auth = firebase.auth();
 
-  //Personlize Greeting message:
-  function personalGreet(){
-    var name = db.collection('Users').data().username;
-    document.getElementById("greeting").innerHTML = "Welcome!" + name;
-  }
+  auth.onAuthStateChanged(user => {
+      var name = document.getElementById('name');
+      var email = document.getElementById('email');
+      var ecopts = document.getElementById('ecopts');
+      var number = document.getElementById('phoneNum');
+      var bio = document.getElementById('bio');
 
-  function findEmail(){
-    var email = db.collection('Emails').data().email;
-    document.getElementById("email").innerHTML = email
-  }
 
-  function findNumber(){
-    var email = db.collection('Numbers').data().email;
-    document.getElementById("phone number").innerHTML = email;
+      var usrUID = user.uid
+      db.collection('Users').where("UID", "==", usrUID).get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+          if(doc.data().Name != null){
+          name.innerText = doc.data().Name
+          }
+
+          if(doc.data().bio != null){
+            bio.innerText += ' ' + doc.data().bio
+          }
+
+          email.innerText = doc.data().email
+
+          ecopts.innerText += doc.data().Points
+          
+          if(doc.data().number != null){
+            number.innerText = doc.data().number
+          }
+            
+
+
+
+        })
+      })
     
-  }
+    if(user == null){
+      console.log("not logged in");
+    }
+      
+  })
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyBh2ky_xnWwRW61N0tmXnM9RnCWsI5D3OA",
     authDomain: "eevent-10adf.firebaseapp.com",
     databaseURL: "https://eevent-10adf.firebaseio.com",
     projectId: "eevent-10adf",
