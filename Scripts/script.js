@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
   
   //auth firebase refs
 const db = firebase.firestore();
-  const auth = firebase.auth();
+const auth = firebase.auth();
   
   // New map
   var map, infoWindow;
