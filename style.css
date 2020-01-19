@@ -2,6 +2,7 @@
   box-sizing: border-box;
   text-align: center;
   font-family: tahoma;
+  color: #E7DFDD;
   font-size: 100%;
 }
 
@@ -9,23 +10,29 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background-image: linear-gradient(#cbd4ff,#c0c7ff,#aeb8ff,#96a2ff,#8189ff);
+    /* background-size: cover; */
+    background-image: url("http://www.goodmorningimagesforlover.com/wp-content/uploads/2018/10/cool-backgrounds-hd.jpeg");
+              background-repeat:no-repeat;
+             background-size:cover;
+    /* background-image: linear-gradient(#E7DFDD,#aeb8ff,#A239CA,#4717F6); */
   }
 
+
+
   .h1{
+    color: #0e0b16;
     font: center;
     margin-bottom: 400px;
     padding:20px;
   }
 
 a {
-  color: #000000;
+  color: #E7DFDD;
 }
 
 /* Main Page */
 #map{
-    height:600px;
+    height:100%;
     width:100%;
   }
 
@@ -54,7 +61,7 @@ a {
 .placeholder-img {
   height: 300px;
   width: 100%;
-  background-color: white;
+  background-color: #0e0b16;
 }
 
 /* Posting page */
@@ -64,10 +71,10 @@ a {
 
 /*frontpage*/
 .faq-container, .main-container {
-  background-color: white;
-  border-radius: 30px;
+  margin-top: 90px;
+  border-radius: 5px;
 }
 
 .faq-question {
-  border-radius: 20px;
+  border-radius: 5px;
 }
