@@ -135,10 +135,10 @@ const db = firebase.firestore();
             map:map
           })
           thisMarker.addListener('click', function(e){
-            if(doc.data().hosted){
+            if(!doc.data().hosted){
               infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+'height = 40% width=40%'+' >'+'<a href="Pages/host.html?' + doc.id + '"  class="btn btn-light">Host the Event</a>');
             }
-            else if(!doc.data().hosted){
+            else if(doc.data().hosted){
               infoWindow.setContent('<h1>' + doc.data().title + '</h1>'+'<img src='+doc.data().Img+'height = 40% width=40%'+' >'+'<a href="Pages/join.html?' + doc.id + '" class="btn btn-light">Join the Event</a>')
             }           
             infoWindow.open(map, thisMarker);onclick
