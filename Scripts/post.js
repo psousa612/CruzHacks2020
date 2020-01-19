@@ -42,7 +42,7 @@ const firebaseConfig = {
 
                 function getLocation(){
                     if(navigator.geolocation){
-                        console.log("run bitch");
+                        
                         navigator.geolocation.getCurrentPosition(saveCoords);
                     }
                     else{
@@ -52,6 +52,7 @@ const firebaseConfig = {
                 }
 
                 function saveCoords(position){
+                    console.log("run bitch");
                     db.collection('Posts').doc().set({
                         title: Title.value,
                         Img: url,
@@ -60,9 +61,11 @@ const firebaseConfig = {
                             Lng:position.coords.longitude
                         },
                         hosted: false
-                    })
+                    }).then(
+                        
+                    )
                     alert("Post Uploaded")
-                    window.location.href = "../index.html";
+                    //window.location.href = "../index.html";
                 }
                 
                 getLocation();
@@ -76,4 +79,6 @@ const firebaseConfig = {
     })
 
 
-
+function returnhome(){
+    window.location.href = "../index.html";
+}
